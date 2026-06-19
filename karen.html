@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prueba</title>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="https://rawgit.com/ngokevin/aframe-particle-system-component/d58edfe4e8f84a04eeb50c4e4cebf081d4e26e2d/dist/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
+<a-scene>
+ 	<a-assets>
+    <img id="cielo" src="cielo.jpg">
+    <img id="groundTexture" src="azul.png">		
+    <audio id="musica" src="harry.mp3"></audio>
+    <a-asset-item id="villa" src="villa.gltf"></a-asset-item>    
+
+</a-assets>
+
+<a-sky src="#cielo"></a-sky>
+
+<a-entity position="-0 0 58">
+
+<a-plane src="#groundTexture" rotation="-90 0 0" height="60" width="60"></a-plane>
+
+
+<a-camera>
+	<a-cursor></a-cursor>
+</a-camera>
+</a-entity>
+<a-entity gltf-model="#villa" position="0 3 60" sound="src: #musica; 
+	on: click;
+	volumen: 10
+	refDistance: 4;
+	rolloffFactor:4"></a-entity>
+
+</a-cylinder>
+<a-text value="TU MIRADA ES TAN DULCE QUE VOY A MORIR DE DIABETES. KAREN NOLASCO :3" color="#c418ad" position="-20 3 40" scale="8 8 8"></a-text>
+<a-entity particle-system="particleCount: 15000; preset: dust; maxAge: 3; texture: https://ucarecdn.com/d9699a61-4bd8-4699-9966-4118715db5f8/; size: 1.4; velocityValue: 0 4 0" position="0 3 0"></a-entity>
+<a-entity particle-system="particleCount: 15000; preset: dust; maxAge: 3; texture: https://ucarecdn.com/d9699a61-4bd8-4699-9966-4118715db5f8/; size: 1.4; velocityValue: 0 4 0" position="0 3 40"></a-entity>
+
+
+</a-scene>
+
+
+
+</body>
+</html>
