@@ -15,7 +15,9 @@ HTML
         <img id="cielo" src="cielo.jpg">
         <img id="groundTexture" src="azul.png">		
         <audio id="musica" src="harry.mp3"></audio>
-        <a-asset-item id="villa" src="villa.gltf"></a-asset-item>    
+        <a-asset-item id="villa" src="villa.gltf"></a-asset-item>
+
+        <img id="snowflake" src="https://i.imgur.com/8N69v9V.png">
     </a-assets>
 
     <a-sky src="#cielo"></a-sky>
@@ -30,7 +32,15 @@ HTML
 
     <a-text value="TU MIRADA ES TAN DULCE QUE VOY A MORIR DE DIABETES. KAREN NOLASCO :3" color="#c418ad" position="-15 3 45" scale="4 4 4" align="center"></a-text>
 
-    <a-entity particle-system="preset: snow; particleCount: 5000; size: 1.5; velocityValue: 0 -2 0; position: 0 15 50"></a-entity>
+    <a-entity particle-system="preset: snow; 
+                                particleCount: 6000; 
+                                size: 2.0; 
+                                texture: #snowflake; 
+                                color: #FFFFFF; 
+                                velocityValue: 0 -3 0; 
+                                position: 0 15 50; 
+                                area: 50 20 50">
+    </a-entity>
 
 </a-scene>
 </body>
