@@ -1,35 +1,60 @@
-HTML
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Prueba</title>
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.4/dist/aframe-environment-component.min.js"></script>
 </head>
 
 <body>
 <a-scene>
+
     <a-assets>
         <img id="cielo" src="cielo.jpg">
-        <img id="groundTexture" src="azul.png">		
+        <img id="groundTexture" src="azul.png">
+
         <audio id="musica" src="harry.mp3"></audio>
+
         <a-asset-item id="villa" src="villa.gltf"></a-asset-item>
     </a-assets>
 
     <a-sky src="#cielo"></a-sky>
 
-    <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100" position="0 0 0"></a-plane>
+    <a-plane
+        src="#groundTexture"
+        rotation="-90 0 0"
+        width="100"
+        height="100"
+        material="repeat: 50 50">
+    </a-plane>
 
     <a-camera position="0 1.6 58">
         <a-cursor></a-cursor>
     </a-camera>
 
-    <a-entity gltf-model="#villa" position="0 0 35" scale="1 1 1" sound="src: #musica; on: click; volume: 10; refDistance: 4; rolloffFactor: 4"></a-entity>
+    <a-entity
+        gltf-model="#villa"
+        position="0 0 35"
+        scale="5 5 5"
+        sound="src: #musica; on: click">
+    </a-entity>
 
-    <a-text value="TU MIRADA ES TAN DULCE QUE VOY A MORIR DE DIABETES. KAREN NOLASCO :3" color="#c418ad" position="-15 3 45" scale="4 4 4" align="center"></a-text>
+    <a-text
+        value="TU MIRADA ES TAN DULCE QUE VOY A MORIR DE DIABETES. KAREN NOLASCO :3"
+        color="#c418ad"
+        position="-15 3 45"
+        scale="4 4 4"
+        align="center">
+    </a-text>
 
-    <a-entity environment="preset: none; dressing: snow; dressingAmount: 100; dressingColor: #ffffff; dressingScale: 1"></a-entity>
+    <a-entity
+        environment="preset: none;
+                     dressing: snow;
+                     dressingAmount: 100;
+                     dressingColor: #ffffff;
+                     dressingScale: 1">
+    </a-entity>
 
 </a-scene>
 </body>
