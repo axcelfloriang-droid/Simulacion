@@ -19,6 +19,10 @@
         <a-asset-item id="villa" src="villa.gltf"></a-asset-item>
     </a-assets>
 
+    <!-- Iluminación fuerte -->
+    <a-light type="ambient" color="#ffffff" intensity="2"></a-light>
+    <a-light type="directional" color="#ffffff" intensity="1.5" position="5 15 7"></a-light>
+
     <a-sky src="#cielo"></a-sky>
 
     <a-plane
@@ -26,7 +30,7 @@
         rotation="-90 0 0"
         width="100"
         height="100"
-        material="repeat: 50 50">
+        material="src: #groundTexture; repeat: 50 50; color: #cccccc; metalness: 0.1; roughness: 0.8">
     </a-plane>
 
     <a-camera position="0 1.6 58">
@@ -49,11 +53,8 @@
     </a-text>
 
     <a-entity
-        environment="preset: none;
-                     dressing: snow;
-                     dressingAmount: 100;
-                     dressingColor: #ffffff;
-                     dressingScale: 1">
+        environment="preset: none; dressing: snow; dressingAmount: 100; dressingColor: #ffffff; dressingScale: 1"
+        position="0 0 0">
     </a-entity>
 
 </a-scene>
