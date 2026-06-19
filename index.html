@@ -26,19 +26,19 @@
     <a-sky src="#cielo"></a-sky>
 
     <a-plane
-        geometry="primitive: plane; width: 500; height: 500"
-        material="src: #groundTexture; repeat: 100 100"
+        geometry="primitive: plane; width: 1000; height: 1000"
+        material="src: #groundTexture; repeat: 200 200"
         rotation="-90 0 0"
         position="0 0 0">
     </a-plane>
 
-    <a-camera position="0 1.6 58">
+    <a-camera position="0 1.6 0">
         <a-cursor></a-cursor>
     </a-camera>
 
     <a-entity
         gltf-model="#villa"
-        position="0 0 35"
+        position="0 0 -35"
         scale="5 5 5"
         sound="src: #musica; on: click">
     </a-entity>
@@ -46,7 +46,7 @@
     <a-text
         value="TU MIRADA ES TAN DULCE QUE VOY A MORIR DE DIABETES. KAREN NOLASCO :3"
         color="#c418ad"
-        position="-15 3 45"
+        position="-15 3 -45"
         scale="4 4 4"
         align="center">
     </a-text>
