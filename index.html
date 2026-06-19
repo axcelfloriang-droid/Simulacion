@@ -32,16 +32,17 @@ HTML
 
     <a-text value="TU MIRADA ES TAN DULCE QUE VOY A MORIR DE DIABETES. KAREN NOLASCO :3" color="#c418ad" position="-15 3 45" scale="4 4 4" align="center"></a-text>
 
-    <a-entity particle-system="preset: snow; 
-                                particleCount: 6000; 
+   <a-entity particle-system="preset: snow; 
+                            particleCount: 6000; 
                                 size: 2.0; 
                                 texture: #snowflake; 
                                 color: #FFFFFF; 
-                                velocityValue: 0 -3 0; 
+                                velocityValue: 0 -0.5 0; /* Velocidad base muy baja */
+                                accelerationValue: 0 -2 0; /* ESTO ES LA CLAVE: Aceleración hacia abajo (Gravedad) */
                                 position: 0 15 50; 
-                                area: 50 20 50">
-    </a-entity>
-
+                                area: 50 20 50;
+                                maxAge: 8; /* Hacemos que vivan más para que lleguen al suelo */">
+</a-entity>
 </a-scene>
 </body>
 </html>
